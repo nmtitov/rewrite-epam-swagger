@@ -10,10 +10,10 @@ import 'package:rewrite_epam_swagger/rewrite_epam_swagger.dart';
 const path = 'path';
 
 Future<void> main(List<String> arguments) async {
-  exitCode = 0; // Presume success
-  final parser = ArgParser();
-  ArgResults argResults = parser.parse(arguments);
-  final path = argResults.arguments.first;
+    exitCode = 0; // Presume success
+    final parser = ArgParser();
+    ArgResults argResults = parser.parse(arguments);
+    final path = argResults.arguments.first;
 
-  await processFile(path: path);
+    await processFile(path: path);
 }

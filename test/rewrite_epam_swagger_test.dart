@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 import 'package:rewrite_epam_swagger/rewrite_epam_swagger.dart';
 
 void main() {
-  test('success', () {
-    expect(42, 42);
-  });
+    test('success', () {
+        expect(42, 42);
+    });
 }
