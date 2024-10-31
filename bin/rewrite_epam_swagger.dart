@@ -1,5 +1,19 @@
-import 'package:rewrite_epam_swagger/rewrite_epam_swagger.dart' as rewrite_epam_swagger;
+// 🎯 Dart imports:
+import 'dart:io';
 
-void main(List<String> arguments) {
-  print('Hello world: ${rewrite_epam_swagger.calculate()}!');
+// 📦 Package imports:
+import 'package:args/args.dart';
+
+// 🌎 Project imports:
+import 'package:rewrite_epam_swagger/rewrite_epam_swagger.dart';
+
+const path = 'path';
+
+Future<void> main(List<String> arguments) async {
+  exitCode = 0; // Presume success
+  final parser = ArgParser();
+  ArgResults argResults = parser.parse(arguments);
+  final path = argResults.arguments.first;
+
+  await processFile(path: path);
 }
